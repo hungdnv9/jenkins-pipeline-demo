@@ -11,8 +11,8 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building step ...'
-                sh "app version is ${params.APP_VERSION}"
-                sh "author ${params.AUTHOR}"
+                sh "echo ${params.APP_VERSION}"
+                sh "echo ${params.AUTHOR}"
             }
         }
         stage('Test') {
