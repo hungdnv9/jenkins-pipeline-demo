@@ -3,7 +3,7 @@ pipeline {
     parameters {
         string(name: 'APP_VERSION', defaultValue: '1.1.0', description: 'App current version')
         text(name: 'AUTHOR', defaultValue: 'hungdnv', description: 'Something is better than nothin')
-        boolean(name: 'doDeploy', defaultValue: false, description: 'If true do deploy')
+        booleanParam(name: 'doDeploy', defaultValue: false, description: 'If true do deploy')
         choice(name: 'DEPLOY_EVN', choice: ['prod', 'staging', 'dev'], description: '')
         password(name: 'AWS_SECRET', defaultValue: 'canyouseeme' ,description: 'AWS secret key')
     }
