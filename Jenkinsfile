@@ -7,9 +7,7 @@ pipeline {
         choice(name: 'DEPLOY_EVN', choices: ['prod', 'staging', 'dev'], description: '')
         password(name: 'AWS_SECRET', defaultValue: 'canyouseeme' ,description: 'AWS secret key')
     }
-    triggers {
-        cron('* * * * *')
-    }
+
     stages {
         stage('Build') {
             steps {
