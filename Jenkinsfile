@@ -19,7 +19,7 @@ pipeline {
             steps {
                 echo 'Testing steps ...'
                 echo 'What is the environment choice?'
-                sh "Result: ${params.DEPLOY_EVN}"
+                echo "Result: ${params.DEPLOY_EVN}"
             }
         }
         stage('Deploy') {
